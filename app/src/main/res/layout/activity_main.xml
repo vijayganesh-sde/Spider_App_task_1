@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <TextView android:layout_width="140dp" android:layout_height="40dp" android:gravity="center"
+              android:id="@+id/idRes1"
+              android:layout_marginTop="35dp" android:layout_marginLeft="20dp" android:text=""></TextView>
+    <Spinner
+            android:layout_width="150dp"
+            android:layout_height="50dp" android:layout_marginTop="80dp" android:layout_marginLeft="10dp"
+            android:id="@+id/spinner"/>
+    <TextView android:layout_width="20dp" android:layout_height="20dp" android:textSize="15dp" android:layout_marginTop="90dp"
+              android:layout_marginLeft="170dp" android:gravity="center" android:text="→"/>
+    <Spinner
+            android:layout_width="150dp"
+            android:layout_height="50dp" android:layout_marginTop="80dp" android:layout_marginLeft="200dp"
+            android:id="@+id/spinner1"/>
+    <TextView android:layout_width="140dp" android:layout_height="40dp" android:gravity="center"
+              android:id="@+id/idRes2"
+              android:layout_marginTop="35dp" android:layout_marginLeft="200dp" android:text=""></TextView>
+    <TextView android:layout_width="160dp" android:layout_height="43dp" android:gravity="center"
+              android:layout_marginTop="180dp" android:layout_marginLeft="20dp"
+              android:text="Enter the input value to convert"></TextView>
+    <EditText android:layout_width="160dp" android:layout_height="45dp" android:gravity="center"
+              android:layout_marginTop="250dp" android:layout_marginLeft="20dp" android:id="@+id/idInp"
+              android:text=""></EditText>
+    <TextView android:layout_width="160dp" android:layout_height="43dp" android:gravity="center"
+              android:layout_marginTop="180dp" android:layout_marginLeft="200dp"
+              android:text="Value after Conversion"></TextView>
+    <TextView android:layout_width="160dp" android:layout_height="45dp" android:gravity="center"
+              android:layout_marginTop="250dp" android:layout_marginLeft="200dp" android:id="@+id/idOut"
+              android:text=""></TextView>
+    <Button android:layout_width="120dp" android:layout_height="60dp" android:layout_marginTop="340dp" android:layout_marginLeft="145dp"
+            android:id="@+id/idConbtn" android:textColor="@color/white" android:shadowColor="@color/black" android:text="Convert" />
+
+</RelativeLayout>

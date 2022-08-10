@@ -50,6 +50,7 @@ class MainActivity : AppCompatActivity() {
         var dist_arr = arrayOf("millimeter(mm)","Centimeter(cm)","Meter(m)")
         conbut.setOnClickListener {
             if (inp1.text.toString()!=""){
+                out.text=""
                 var val1=inp1.text.toString().toDouble()
                 if ((res1.text.toString() in temp_arr && res2.text.toString() in  temp_arr)||(res1.text.toString() in wt_arr && res2.text.toString() in  wt_arr)||(res1.text.toString() in dist_arr && res2.text.toString() in  dist_arr)|| (res1.text.toString() in sp_arr && res2.text.toString() in  sp_arr)) {
                     if (res1.text.toString() == "Celsius(℃)"){
@@ -62,7 +63,7 @@ class MainActivity : AppCompatActivity() {
                             out.text = res.toString()
                         }
                     }
-                    if (res1.text.toString()== "Fahrenheit(℉)"){
+                    if (res1.text.toString() == "Fahrenheit(℉)"){
                         if (res2.text.toString() == "Celsius(℃)"){
                             val res = (val1 - 32)*0.55
                             out.text = res.toString()
@@ -172,12 +173,14 @@ class MainActivity : AppCompatActivity() {
                             out.text = res.toString()
                         }
                     }
+                    Toast.makeText(this,"Successfully Converted", Toast.LENGTH_SHORT).show()
                 }
                 else{
                     Toast.makeText(this,"Choose proper units for Conversion", Toast.LENGTH_SHORT).show()
                 }
             }
             else{
+                out.text=""
                 Toast.makeText(this,"Enter an input", Toast.LENGTH_SHORT).show()
             }
 

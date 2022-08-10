@@ -35,7 +35,9 @@
     <TextView android:layout_width="160dp" android:layout_height="45dp" android:gravity="center"
               android:layout_marginTop="250dp" android:layout_marginLeft="200dp" android:id="@+id/idOut"
               android:text=""></TextView>
-    <Button android:layout_width="120dp" android:layout_height="60dp" android:layout_marginTop="340dp" android:layout_marginLeft="145dp"
-            android:id="@+id/idConbtn" android:textColor="@color/white" android:shadowColor="@color/black" android:text="Convert" />
+    <Button android:layout_width="130dp" android:layout_height="60dp" android:layout_marginTop="340dp"
+            android:layout_marginLeft="135dp"
+            android:id="@+id/idConbtn" android:textColor="@color/white" android:shadowColor="@color/black"
+            android:text="Convert"/>
 
 </RelativeLayout>

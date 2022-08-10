@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         inp1 = findViewById<EditText>(R.id.idInp)
         out = findViewById<TextView>(R.id.idOut)
         conbut = findViewById<Button>(R.id.idConbtn)
-        var options= arrayOf("Choose the unit","Celsius(℃)","Fahrenheit(℉)","Kelvin(K)","millimeter(mm)","Centimeter(cm)","Meter(m)","milligram(mg)","gram(g)","Kilogram(Kg)","Km/sec","Km/hr","miles/hr")
+        var options= arrayOf("Choose the unit","Celsius(℃)","Fahrenheit(℉)","Kelvin(K)","millimeter(mm)","Centimeter(cm)","Meter(m)","Kilometer(Km)","milligram(mg)","gram(g)","Kilogram(Kg)","Km/sec","Km/hr","miles/hr")
         opt.adapter= ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,options)
         opt.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         var temp_arr= arrayOf("Celsius(℃)","Fahrenheit(℉)","Kelvin(K)")
         var sp_arr= arrayOf("Km/sec","Km/hr","miles/hr")
         var wt_arr = arrayOf("milligram(mg)","gram(g)","Kilogram(Kg)")
-        var dist_arr = arrayOf("millimeter(mm)","Centimeter(cm)","Meter(m)")
+        var dist_arr = arrayOf("millimeter(mm)","Centimeter(cm)","Meter(m)","Kilometer(Km)")
         conbut.setOnClickListener {
             if (inp1.text.toString()!=""){
                 out.text=""
@@ -122,6 +122,10 @@ class MainActivity : AppCompatActivity() {
                             val res = val1/1000
                             out.text = res.toString()
                         }
+                        if (res2.text.toString() == "Kilometer(Km)"){
+                            val res =val1 / 1000000
+                            out.text=res.toString()
+                        }
                     }
                     if (res1.text.toString()== "Centimeter(cm)"){
                         if (res2.text.toString() == "Meter(m)"){
@@ -132,6 +136,9 @@ class MainActivity : AppCompatActivity() {
                             val res = val1 *10
                             out.text = res.toString()
                         }
+                        if (res2.text.toString() == "Kilometer"){
+                            val res = val1 / 100000
+                        }
                     }
                     if (res1.text == "Meter(m)"){
                         if (res2.text == "millimeter(mm)"){
@@ -141,6 +148,24 @@ class MainActivity : AppCompatActivity() {
                         if (res2.text == "Centimeter(cm)"){
                             val res = val1 *100
                             out.text = res.toString()
+                        }
+                        if (res2.text == "Kilometer(Km)"){
+                            val res= val1 /1000
+                            out.text= res.toString()
+                        }
+                    }
+                    if (res1.text == "Kilometer(Km)"){
+                        if (res2.text == "millimeter(mm)"){
+                            val res = val1 *1000000
+                            out.text = res.toString()
+                        }
+                        if (res2.text == "Centimeter(cm)"){
+                            val res = val1 *100000
+                            out.text = res.toString()
+                        }
+                        if (res2.text == "Meter(m)"){
+                            val res= val1 *1000
+                            out.text= res.toString()
                         }
                     }
                     if (res1.text.toString() == "Km/sec"){
